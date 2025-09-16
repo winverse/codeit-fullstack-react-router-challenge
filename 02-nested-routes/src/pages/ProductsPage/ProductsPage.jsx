@@ -1,4 +1,3 @@
-import { Outlet } from 'react-router';
 import styles from './ProductsPage.module.css';
 
 export function ProductsPage() {
