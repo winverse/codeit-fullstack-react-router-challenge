@@ -1,38 +1,26 @@
-import { useSearchParams } from 'react-router';
+import { products } from '@/data/products';
 import styles from './Search.module.css';
-
-// 데이터: 강의의 questions 배열 대신 products 배열 사용
-const products = [
-  { id: 1, name: '게이밍 노트북', price: 1500000 },
-  { id: 2, name: '사무용 노트북', price: 900000 },
-  { id: 3, name: '블루투스 키보드', price: 45000 },
-  { id: 4, name: '기계식 키보드', price: 120000 },
-  { id: 5, name: '27인치 모니터', price: 300000 },
-  { id: 6, name: '무선 마우스', price: 35000 },
-];
 
 export function SearchPage() {
   // TODO 1: useSearchParams 훅을 사용해 searchParams와 setSearchParams를 가져오세요.
-  // HINT: 강의 내용과 동일합니다.
 
   // TODO 2: URL로부터 'search'와 'orderBy' 쿼리 파라미터 값을 가져오세요.
   // HINT: searchParams.get()을 사용합니다.
   const searchTerm = null; // 'search' 파라미터
   const orderBy = null; // 'orderBy' 파라미터
 
-  // TODO 5: searchTerm과 orderBy 값에 따라 products 배열을 필터링하고 정렬하는 로직을 구현하세요.
-  const filteredProducts = []; // 이 변수에 최종 결과를 할당하세요.
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO 3: form의 'search' input 값을 가져와 search 쿼리 파라미터를 업데이트하세요.
-    // HINT: setSearchParams({ search: '검색어' });
+    // HINT: formData를 이용하여 검색어를 구하고, setSearchParams({ search: `${검색어}` }); 부분을 채우시면 됩니다.
   };
 
   const handleSort = (sortType) => {
     // TODO 4: 기존 'search' 파라미터는 유지하면서 'orderBy' 파라미터를 업데이트하세요.
-    // HINT: setSearchParams({ search: searchTerm || '', orderBy: sortType });
   };
+
+  // TODO 5: searchTerm과 orderBy 값에 따라 products 배열을 필터링하고 정렬하는 로직을 구현하세요.
+  const searchedProducts = []; // 이 변수에 최종 결과를 할당하세요.
 
   return (
     <div className="search-container">
@@ -68,7 +56,7 @@ export function SearchPage() {
       <hr />
 
       <h3>검색 결과</h3>
-      {/* TODO 6: searchTerm의 존재 여부와 filteredProducts의 길이에 따라 다른 UI를 보여주세요. */}
+      {/* TODO 6: searchTerm의 존재 여부와 searchedProducts의 길이에 따라 다른 UI를 보여주세요. */}
       <p>검색어를 입력하여 상품을 찾아보세요.</p>
     </div>
   );
