@@ -11,9 +11,7 @@ export function HomePage() {
             <Link to="/profile">프로필 페이지</Link>
           </li>
           <li>
-            <Link to="/legacy-profile">
-              옛날 프로필 페이지 (리다이렉트 테스트)
-            </Link>
+            <Link to="/old-home">옛날 홈 페이지 (리다이렉트 테스트)</Link>
           </li>
           <li>
             <Link to="/this-page-does-not-exist">없는 페이지 (404 테스트)</Link>
