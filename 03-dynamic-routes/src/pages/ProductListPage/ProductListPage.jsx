@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { products } from '../../data/products';
+import { Link } from 'react-router';
+import { products } from '@/data/products';
 import styles from './ProductListPage.module.css';
 
 export function ProductListPage() {
@@ -8,14 +8,19 @@ export function ProductListPage() {
       <div className={styles.container}>
         <h2>상품 목록</h2>
         <p>React Router를 사용하여 상품 목록과 상세 페이지를 구현해보세요.</p>
-        <div className={styles.productList}>
+        <ul className={styles.productList}>
           {products.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`} className={styles.productCard}>
-              <h3 className={styles.productName}>{product.name}</h3>
-              <p className={styles.productPrice}>{product.price.toLocaleString()}원</p>
-            </Link>
+            <li key={product.id} className={styles.productItem} s>
+              <Link
+                to={`/products/${product.id}`}
+                className={styles.productLink}
+              >
+                <h3>{product.name}</h3>
+                <p>{product.price.toLocaleString()}원</p>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

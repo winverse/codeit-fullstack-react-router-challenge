@@ -1,19 +1,16 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router';
 import { products } from '../../data/products';
 import styles from './ProductDetailPage.module.css';
 
 export function ProductDetailPage() {
   // TODO 1: useParams 훅을 사용하여 URL로부터 productId를 가져오세요.
-  const { productId } = useParams(); // 예시: const { productId } = useParams();
 
   // TODO 2: products 배열에서, 위에서 얻은 productId와 일치하는 상품을 찾으세요.
   // HINT: 배열의 find 메서드를 사용합니다.
-  const product = products.find(p => p.id === productId);
+  const product = [];
 
   // TODO 3: 만약 product가 존재하지 않는다면, 아래 "상품을 찾을 수 없습니다" 메시지를 보여주세요.
-  if (!product) {
-    return <div className={styles.error}>상품을 찾을 수 없습니다.</div>;
-  }
+  // HINT: if (condition) {}
 
   return (
     <div className={styles.page}>
