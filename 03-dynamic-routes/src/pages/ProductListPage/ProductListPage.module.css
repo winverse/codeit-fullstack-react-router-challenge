@@ -2,12 +2,16 @@
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
-}
 
-.page h1 {
-  color: #333;
-  margin-bottom: 2rem;
-  text-align: center;
+  h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
 
 .productList {
@@ -23,11 +27,11 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.productItem:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .productLink {
@@ -37,8 +41,8 @@
   color: #333;
   font-weight: 600;
   transition: color 0.2s ease;
-}
 
-.productLink:hover {
-  color: #646cff;
+  &:hover {
+    color: #646cff;
+  }
 }
