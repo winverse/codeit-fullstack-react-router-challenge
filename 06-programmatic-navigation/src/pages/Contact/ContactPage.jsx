@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router';
-
 export function ContactPage() {
   // TODO 1: useNavigate 훅을 호출하여 navigate 함수를 가져오세요.
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     // 이 예제에서는 폼 데이터 처리 로직은 생략하고, 제출 즉시 성공했다고 가정합니다.
     alert('문의가 성공적으로 제출되었습니다!');
 
@@ -29,7 +27,9 @@ export function ContactPage() {
             <label htmlFor="message">문의 내용</label>
             <textarea id="message" rows="4"></textarea>
           </div>
-          <button type="submit" className="submit-button">제출</button>
+          <button type="submit" className="submit-button">
+            제출
+          </button>
         </form>
       </div>
     </div>
