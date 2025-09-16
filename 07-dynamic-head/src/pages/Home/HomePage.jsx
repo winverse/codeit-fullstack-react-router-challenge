@@ -1,46 +1,21 @@
-import { Link } from 'react-router';
-// TODO: Helmet을 import 하세요.
+import { Link } from 'react-router-dom';
 
 export function HomePage() {
   return (
     <div className="page-content">
-      {/* TODO: Helmet 컴포넌트를 추가하여 페이지 제목과 메타 태그를 설정하세요. */}
-
-      <div className="hero-section">
-        <h1>React Router 학습</h1>
-        <p>동적 헤드 관리와 SEO 최적화를 배워보세요</p>
-        <p className="hero-description">
-          현재 페이지의 제목은 "홈 - React Router 학습"입니다. 브라우저 탭을
-          확인해보세요.
+      <div className="page-header">
+        <h1>Dynamic Head 챌린지</h1>
+        <p>
+          각 페이지에 방문하여 브라우저 탭의 제목과 개발자 도구의 `head` 태그 변화를 확인해보세요.
         </p>
       </div>
-
-      <div className="navigation-cards">
-        <Link to="/about" className="nav-card">
-          <span className="nav-card-icon">ℹ️</span>
-          <h3>소개 페이지</h3>
-          <p>
-            React Router 학습 사이트 소개와 동적 헤드 관리에 대해 알아보세요.
-          </p>
+      <div style={{ display: 'flex', gap: '1rem' }}>
+        <Link to="/portfolio" className="back-link">
+          포트폴리오 페이지로
         </Link>
-      </div>
-
-      <div className="features-section">
-        <h2>학습할 내용</h2>
-        <div className="features-grid">
-          <div className="feature-item">
-            <h4>🎯 동적 헤드 관리</h4>
-            <p>react-helmet-async를 사용한 페이지별 헤드 정보 설정</p>
-          </div>
-          <div className="feature-item">
-            <h4>🔍 SEO 최적화</h4>
-            <p>메타 태그와 오픈그래프를 통한 검색 엔진 최적화</p>
-          </div>
-          <div className="feature-item">
-            <h4>📱 반응형 디자인</h4>
-            <p>모든 디바이스에서 최적화된 사용자 경험</p>
-          </div>
-        </div>
+        <Link to="/contact" className="back-link">
+          문의하기 페이지로
+        </Link>
       </div>
     </div>
   );
